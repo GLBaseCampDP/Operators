@@ -6,13 +6,11 @@
 #include <iostream>
 struct A {
 	int i;
-	A()	{ i = 0;}
-	A(int i) {	this->i = i;}
+	A(): i(0)	{}
+	A(int j): i(j) {}
 	//  перевантажений бінарний оператор як метод
 	A operator+(A& a) { 
-		A c;
-		c.i = i + a.i;
-		return c;
+		return A(i + a.i);
 	}
 	//  перевантажений унарний оператор як метод
 	void operator!() { 

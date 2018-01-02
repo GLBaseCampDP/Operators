@@ -9,8 +9,8 @@ class A {
 	int i;
 	public:
 		int get() { return i; }
-		A()	{ i = 0; }
-		A(int i) {	this->i = i; }
+		A() : i(0) {}
+		A(int j) : i(j) {}
 		void show()	{
 			std::cout << " i=" << i << "\n";
 		}
